@@ -1,0 +1,70 @@
+@use '../util' as u;
+
+.landing-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: u.$satoshi;
+}
+
+.wrapper {
+    display: inline-block;
+}
+
+
+.wrapper .dynamic-txt {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    height: 180px;
+    line-height: 180px;
+    overflow: hidden;
+    text-align: center;
+
+    @include u.breakpoint-down(small){
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        height: 85px;
+        line-height: 85px;
+        
+    }
+   
+}
+
+
+.dynamic-txt li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style: none;
+    font-size: 145px;
+    font-weight: 700;
+    color: var(--text-color);
+    position: relative;
+    top: 0;
+    animation: sliding 18s steps(12) infinite;
+
+    @include u.breakpoint-down(small){
+        font-size: 64px;
+        animation: sliding-small 18s steps(12) infinite;
+    }
+
+    
+}
+
+.dynamic-txt li span {
+    position: relative;
+}
+
+.dynamic-txt li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--background-color);
+    border-left: 6px solid  var(--text-color);
+    animation: typing 1.5s steps(12) infinite;
+}
+

@@ -1,0 +1,42 @@
+@use '../util' as u;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 0;
+    margin-inline: auto;
+
+    &__main {
+        margin-top: 5vh;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__main img{
+        border-radius: 10px;
+        width: 100%;
+
+        @include u.breakpoint(large) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 30%;
+        }
+    
+    }
+
+
+    &__sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+}

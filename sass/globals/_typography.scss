@@ -1,0 +1,40 @@
+@use '../util' as u;
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid__sidebar {
+    text-align: center;
+    font-size: 30px;
+
+    @include u.breakpoint-down(small){
+        font-size: 20px;
+    }
+    
+}
+.work__label {
+    font-size: 60px;
+    text-align: center;
+    font-family: u.$bebas;
+    font-weight: 700;
+}
+
+.work__label h1 {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 120px;
+    text-align: center;
+    font-family: u.$satoshi;
+}

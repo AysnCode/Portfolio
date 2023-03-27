@@ -1,0 +1,108 @@
+@use '../util' as u;
+
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color:var(--text-color);
+  font-size: 25px;
+  font-family: u.$khand;
+  background-color: white;
+  padding: 45px 45px;
+  border-radius: 10px;
+
+    @include u.breakpoint-down(small) {
+      width: 300px;
+      font-size: 18px;
+    }
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+  
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+
+  @include u.breakpoint-down(small) {
+    font-size: 20px;
+  }
+}
+
+/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
+.accordion .label::before {
+  content: '+';
+  color: var(--scroll-color);
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+  
+  @include u.breakpoint-down(small) {
+    font-size: 18px;
+  }
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height: 0;
+  font-size: 18px;
+  width: 500px;
+  overflow: hidden;
+  transition: 0.5s;
+
+  @include u.breakpoint-down(small) {
+    font-size: 13px;
+    width: 200px;
+  }
+}
+
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid gray;
+}
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .container.active .content {
+  height: 80px;
+  
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+
+#logoicon {
+  width: 50px;
+  padding-right: 1px;
+}
+@media (max-width: 43.7485em) {
+  #logoicon {
+    width: 25px;
+    
+  }
+}
+
+.softwares {
+  display: flex;
+}
+

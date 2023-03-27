@@ -1,0 +1,74 @@
+@use '../util' as u;
+
+.about {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: u.$satoshi;
+    background: aliceblue;
+    margin: 0;
+    padding: 0;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10vh;
+
+        img {
+            width: 90vh;
+
+            @include u.breakpoint-down(small){
+                width: 40vh;
+            }
+            
+        }
+    }
+}
+
+
+
+
+.desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 5em;
+    font-size: 20px;
+    font-family: u.$satoshi;
+
+    @include u.breakpoint-down(small){
+        font-size: 15px;
+    }
+    
+}
+
+
+.desc__text h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+
+    @include u.breakpoint-down(small){
+        width: 300px;
+    }
+}
+
+
+.focus {
+    transition: all 0.2s;
+
+}
+
+.abtlbl h1 {
+    text-align: center;
+    font-size: 80px;
+
+    @include u.breakpoint-down(small){
+        font-size: 50px;
+     }
+}

@@ -1,0 +1,55 @@
+@use '../util' as u;
+
+.sec-2 {
+    font-family: u.$general;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.sec-2 h1 {
+    font-size: 100px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-bottom {
+    transform: translateY(-20%);
+    transition: opacity 250ms ease-in, transform 400ms ease-in-out;
+    opacity: 0;
+}
+
+.from-left {
+    transform: translateX(20%);
+    transition: opacity 250ms ease-in, transform 400ms ease-in-out;
+    opacity: 0;
+}
+
+.from-left.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.from-right {
+    transform: translateX(-20%);
+    transition: opacity 250ms ease-in, transform 400ms ease-in-out;
+    opacity: 0;
+}
+
+.from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.from-bottom.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+

@@ -1,0 +1,63 @@
+@use '../util' as u;
+
+#image-track {
+    padding-top: 20%;
+    padding-bottom: 3%;
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    user-select: none;
+
+    @include u.breakpoint-down(small){
+        padding-top: 675%;
+        display: grid;
+        transform: translate(50%, 50%);
+    }
+}
+
+#image-track > .image {
+    width: 60vmin;
+    height: 70vmin;
+    object-fit: cover;
+    object-position: 100% center;
+    cursor: pointer;
+
+    @include u.breakpoint-down(small){
+       width: 80vmin;
+       
+    }
+}
+
+.slider .popup-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.slider .popup-image span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.slider .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    object-fit: cover;
+}

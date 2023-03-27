@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Renders</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link href="https://api.fontshare.com/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901,1&display=swap" rel="stylesheet">
+
+        <link href="https://api.fontshare.com/v2/css?f[]=nunito@300,201,301,700,900,601,501,600,701,901,800,401,200,400,500,801,1,2&f[]=bebas-neue@400&display=swap" rel="stylesheet">
+
+        <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400&f[]=khand@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./sass/styles.css">
+
+</head>
+<body>
+
+     <!-- NavBar Section -->
+     <header class="main-header">
+        <div class="logo">
+            <a href="index.html"><img src="./images/logonedw.png" alt=""></a>
+        </div>
+
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+
+        <label for="menu-btn" class="menu-icon">
+            <span class="menu-icon__line"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-link">
+                <a href="about.html">About</a>
+            </li>
+            <li class="nav-link">
+                <a href="index.html#works">Works</a>
+            </li>
+            <li class="nav-link">
+                <a href="index.html#footer">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <div class="title3D">
+        <h1>3D Renders</h1>
+    </div>
+        
+
+   <div class="slider">
+        <div id="image-track" data-mouse-down-at ="0" data-prev-percentage="0">
+            <img class ="image" src="images/3d/gh.png" draggable="false">
+            <img class ="image" src="images/3d/lost.png" draggable="false">
+            <img class ="image" src="images/3d/driftingfinal.png" draggable="false">
+            <img class ="image" src="images/3d/robot.png" draggable="false">
+            <img class ="image" src="images/3d/kylo1.png" draggable="false">
+            <img class ="image" src="images/3d/try.png" draggable="false">
+            <img class ="image" src="images/3d/Buddha.png" draggable="false">
+            <img class ="image" src="images/3d/bike3.png" draggable="false">
+            <img class ="image" src="images/3d/infectedrock.png" draggable="false">
+            <img class ="image" src="images/3d/infest1.png" draggable="false">
+            <img class ="image" src="images/3d/rockyjello1.png" draggable="false">
+            <img class ="image" src="images/3d/Kodama1.png" draggable="false">
+            <img class ="image" src="images/3d/noface1.png" draggable="false">
+
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img class ="image" src="images/3d/gh.png">
+
+        </div>
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/intersection-observer.js"></script>
+    <script src="js/slider.js"></script>
+
+
+
+</body>
+</html>

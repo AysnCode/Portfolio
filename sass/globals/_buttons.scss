@@ -1,0 +1,21 @@
+@use '../util' as u;
+
+.button__1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+#landingbutton {
+    border: none;
+    color: hsl(0, 0%, 54%);
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    font-family: u.$khand;
+}
+
+#landingbutton:hover {
+    color: var(--scroll-color);
+}

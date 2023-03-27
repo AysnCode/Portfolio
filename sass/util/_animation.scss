@@ -1,0 +1,134 @@
+@use 'breakpoints' as u;
+
+// NavBar Animations
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0px rgba(117, 0, 0, 0.6);
+        background: rgba(117,0, 0,0.6);
+    }
+
+    to {
+        box-shadow: 0 0 0 5000px rgba(255,255, 255,0);
+        background: rgba(255,255, 255, 0);
+    }
+}
+
+@keyframes openTop {
+    0% {
+        transform: translateY(-5px)
+        rotate(0deg);
+    }
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+@keyframes closedTop {
+    0% {
+        transform: translateY(-5px)
+        rotate(0deg);
+    }
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+@keyframes openMid {
+
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes closedMid {
+
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes openBtm {
+    0% {
+        transform: translateY(5px)
+        rotate(0deg);
+    }
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+@keyframes closedBtm {
+    0% {
+        transform: translateY(5px)
+        rotate(0deg);
+    }
+    50% {
+        transform: translateY(0px)
+        rotate(0deg);
+    }
+    100% {
+        transform: translateY(0px)
+        rotate(90deg);
+    }
+}
+
+// Typing animation for Landing Text "Hello"
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -2.1875rem 0 2.1875rem;
+    }
+}
+
+@keyframes sliding {
+    100% {
+        top: -2280px;
+    }
+}
+
+@keyframes sliding-small {
+    100% {
+            top: -1140px;
+        
+    }
+}
+
+//Scroll-Down Animation
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}

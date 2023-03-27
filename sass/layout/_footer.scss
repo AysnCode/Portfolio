@@ -1,0 +1,153 @@
+@use '../util' as u;
+footer {
+    margin-bottom: 3rem;
+    font-family: u.$satoshi;
+
+    a {
+        font-style: u.$khand;
+        text-decoration: none;
+        list-style-type: none;
+        color: black;
+    }
+
+    a:hover {
+        color: var(--scroll-color);
+    }
+
+    p {
+        color: black;
+    }
+
+    li {
+        margin-bottom: 1rem;
+    }
+
+    
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    label {
+        display: block;
+        font-size: 20px;
+        font-family: u.$bebas;
+        margin: .5rem;
+    }
+
+    img {
+        width: 100%;
+        max-width: 45px;
+        margin-left: .3rem;
+    }
+}
+
+.footer {
+    margin-top: 1rem;
+    padding: 20px 0;
+
+
+    &__col {
+        grid-template-columns: 2fr;
+        grid-template-rows: auto auto;
+        
+        @include u.breakpoint-down(small) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+    }
+
+
+}
+
+.detail {
+
+    width: 100%;
+
+    @include u.breakpoint-down(small) {
+        width: 300px;
+    }
+    
+    &__header {
+        font-size: 40px;
+        font-family: u.$bebas;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imggif {
+    margin-top: 15rem;
+    display: grid;
+    justify-content: center;
+}
+
+.imggif img {
+    max-width: 150px;
+}
+
+.form__group {
+    display: block;
+
+}
+
+.form__input {
+    font-size: 16px;
+    font-family: u.$satoshi;
+    width: 20rem;
+    height: 3rem;
+
+    @include u.breakpoint-down(small) {
+        width: 12rem;
+    }
+}
+
+.form__textarea {
+    font-size: 16px;
+    font-family: u.$satoshi;
+    width: 20rem;
+    height: 7rem;
+
+    @include u.breakpoint-down(small) {
+        width: 12rem;
+    }
+}
+
+
+.form__input::-webkit-input-placeholder {
+    font-family: u.$khand;
+    padding-left: .3rem;
+}
+
+.form__textarea::-webkit-input-placeholder {
+    font-family: u.$khand;
+    padding-top: .5rem;
+    padding-left: .3rem;
+   
+}
+.form__submit{
+    color: aliceblue;
+}
+
+.form__btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5rem;
+    border-radius: 3px;
+    width: 100px;
+    color: aliceblue;
+    background: var(--text-color);
+    
+}
+
+.detail {
+    padding: 2.5rem;
+}
+
+

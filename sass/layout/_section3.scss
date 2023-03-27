@@ -1,0 +1,98 @@
+@use '../util' as u;
+
+.sec-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 300px;
+    max-width: 400px;
+    overflow: hidden;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 3px 2px 20px rgba(hsl(0, 100%, 23%), 0.2);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 200ms ease-in-out;
+    
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: 3px 2px 18px rgba(hsl(0, 100%, 23%), 0.6);
+        color: var(--scroll-color);
+    }
+
+    &__image {
+        position: relative;
+        flex: 0 0 350px;
+        width: auto;
+
+        .static {
+            position: absolute;
+            background: white;
+          }
+        
+        .static:hover {
+            opacity:0;
+          }
+        
+    }
+    
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    &__title {
+        padding-top: .5rem;
+        font-family: u.$satoshi;
+        font-size: 1.7rem;
+        font-weight: 900;
+        margin-bottom: .5rem;
+
+    }
+
+    &__snippet {
+        margin-bottom: 1rem;
+        font-family: u.$general;
+    }
+
+    &__readmore {
+        margin-bottom: 1rem;
+        margin-top: auto;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: u.$bebas;
+    }
+
+
+}
+
+.work__label h1 {
+    font-size: 120px;
+
+    @include u.breakpoint-down(small){
+        font-size: 80px;
+    }
+
+}
+
+#sec-other {
+    margin-top: 50vh;
+}

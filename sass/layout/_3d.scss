@@ -1,0 +1,13 @@
+@use '../util' as u;
+
+.title3D {
+    font-family: u.$satoshi;
+    font-size: 80px;
+    padding-top: 80px;
+    text-align: center;
+
+    @include u.breakpoint-down(small){
+       font-size: 30px;
+    }
+}
+
